@@ -16,6 +16,10 @@ public enum WaitDuration {
 
 	private int duration;
 
+	public int getDuration() {
+		return duration;
+	}
+
 	WaitDuration(final int duration){
 		this.duration = duration;
 	}
