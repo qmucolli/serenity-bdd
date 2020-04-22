@@ -52,8 +52,9 @@ public class AbstractPage extends PageObject {
                             "} \n" +
                             "return isLoaded;\n").toString().equalsIgnoreCase("true"));
             final Date endTime = new Date();
+            log.trace("loader execution on page took about {} milliseconds", endTime.getTime() - startTime.getTime());
         } catch (Exception e) {
-            e.printStackTrace();
+            log.debug("Page wasn't loaded", e.getLocalizedMessage());
         }
         return this;
     }
