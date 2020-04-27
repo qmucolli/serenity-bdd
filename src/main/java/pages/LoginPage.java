@@ -21,6 +21,18 @@ public class LoginPage extends AbstractPage {
     @FindBy(id = "pass")
     WebElementFacade passwordInput;
 
+    public WebElementFacade getEmailInput() {
+        return emailInput;
+    }
+
+    public WebElementFacade getPasswordInput() {
+        return passwordInput;
+    }
+
+    public WebElementFacade getLoginButton() {
+        return loginButton;
+    }
+
     @FindBy(css = "[value=\"Log In\"]")
     WebElementFacade loginButton;
 }
