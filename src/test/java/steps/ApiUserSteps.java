@@ -22,6 +22,6 @@ public class ApiUserSteps extends ScenarioSteps {
                 .post(CREATE_USER)
                 .then()
                 .assertThat()
-                .statusCode(2088);
+                .statusCode(201);
     }
 }
