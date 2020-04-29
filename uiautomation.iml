@@ -197,5 +197,15 @@
     <orderEntry type="library" name="Maven: io.cucumber:cucumber-java:2.4.0" level="project" />
     <orderEntry type="library" name="Maven: io.cucumber:cucumber-junit:2.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-csv:1.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: net.serenity-bdd:serenity-rest-assured:2.1.10" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.rest-assured:rest-assured:3.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.ccil.cowan.tagsoup:tagsoup:1.2.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.rest-assured:json-path:3.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.rest-assured:rest-assured-common:3.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: io.rest-assured:xml-path:3.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.sun.xml.bind:jaxb-osgi:2.2.10" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.apache.sling:org.apache.sling.javax.activation:0.1.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.codehaus.groovy:groovy-xml:2.5.5" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.codehaus.groovy:groovy-json:2.5.5" level="project" />
   </component>
 </module>
