@@ -4,25 +4,20 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
 import net.serenitybdd.core.annotations.findby.FindBy;
-import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
-
-/**
- * Created by Ardit Podrimaj
- */
 
 @Getter
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class LoginPage extends AbstractPage {
 
-    @FindBy(id = "email")
-    WebElementFacade emailInput;
+    @FindBy(id = "username")
+    WebElementFacade usernameInput;
 
-    @FindBy(id = "pass")
+    @FindBy(id = "password")
     WebElementFacade passwordInput;
 
-    public WebElementFacade getEmailInput() {
-        return emailInput;
+    public WebElementFacade getUsernameInput() {
+        return usernameInput;
     }
 
     public WebElementFacade getPasswordInput() {
@@ -33,6 +28,6 @@ public class LoginPage extends AbstractPage {
         return loginButton;
     }
 
-    @FindBy(css = "[value=\"Log In\"]")
+    @FindBy(css = "[value=\"Login\"]")
     WebElementFacade loginButton;
 }

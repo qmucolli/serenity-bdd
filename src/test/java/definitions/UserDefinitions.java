@@ -1,5 +1,6 @@
 package definitions;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import dto.RoleType;
@@ -21,8 +22,17 @@ public class UserDefinitions {
         apiUserSteps.createUser(email, username, firstName, lastName, password, type);
     }
 
-    @Then("^User should be created$")
-    public void userShouldBeCreated() {
+    @Then("^User with role should be created$")
+    public void userWithRoleShouldBeCreated() {
 
+    }
+
+    @Given("^I login with the username \"([^\"]*)\" and password \"([^\"]*)\"$")
+    public void iLoginWithTheUsernameAndPassword(String username, String password) {
+        apiUserSteps.login(username, password);
+    }
+
+    @Then("^User should see the Homepage$")
+    public void userShouldSeeTheHomepage() {
     }
 }

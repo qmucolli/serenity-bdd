@@ -23,16 +23,34 @@ public class SmartApiUserSteps extends ScenarioSteps {
                            String password,
                            RoleType type) throws IOException {
         RoleTransport role = new RoleTransport(type);
-//        Uncomment if the missing role check is wanted
-        UserTransport user = new UserTransport(email, username, firstName, lastName, password, null);
+//        Uncomment if theScenarioRes missing role check is wanted
+//        UserTransport user = new UserTransport(email, username, firstName, lastName, password, null);
 
-//        UserTransport user = new UserTransport(email, username, firstName, lastName, password, role);
+        UserTransport user = new UserTransport(email, username, firstName, lastName, password, role);
         String userAsJson = objectMapper.writeValueAsString(user);
         SerenityRest.rest()
                 .contentType(ContentType.JSON)
                 .body(userAsJson)
                 .when()
                 .post("http://localhost:8080/facility/api/users")
+                .then()
+                .assertThat()
+                .statusCode(200);
+    }
+
+    @Step("Login user with credentials {0} & {1}")
+    public void login(String username,
+                        String password) {
+        String userJson = "{" +
+                "\nusername: " + username +
+                "\npassword: " + password +
+                "\n}";
+
+        SerenityRest.rest()
+                .contentType(ContentType.JSON)
+                .body(userJson)
+                .when()
+                .post("http://localhost:8080/facility/api/auth")
                 .then()
                 .assertThat()
                 .statusCode(200);

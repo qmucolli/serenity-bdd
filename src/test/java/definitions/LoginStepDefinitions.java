@@ -6,10 +6,6 @@ import lombok.Getter;
 import net.thucydides.core.annotations.Steps;
 import steps.LoginSteps;
 
-/**
- * Created by Ardit Podrimaj
- */
-
 public class LoginStepDefinitions {
 
     @Steps
