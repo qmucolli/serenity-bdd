@@ -1,6 +1,6 @@
 Feature: Department
 
-  @debug
+  @Smoke
   Scenario: Create new department
-    Given I create a department with the specialisation of "INFECTED"
-    Then "INFECTED" Department should be created
+    Given I create a department with the specialisation of "CARDIO"
+    Then "CARDIO" Department should be created

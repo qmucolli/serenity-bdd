@@ -19,21 +19,10 @@ public class DepartmentApiSteps extends ScenarioSteps {
 
         SerenityRest.rest()
                 .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiZXhwIjoxNTkyOTQ3NTUwfQ.ye-Xz-jgAB8eaADkUft3TM4CFTEL-s-AXfKuFjig4QoCp2OlTC-mzV2oqa5Xf-ESa0wOI6W20txrY75nkxlPtw")
-                .body("{\n" +
-                        "\t\"specialisation\":\"CARDIO\",\n" +
-                        "\t\"rooms\":[\n" +
-                        "\t  {\n" +
-                        "\t    \"name\":\"test\"\n" +
-                        "\t  },\n" +
-                        "\t  {\n" +
-                        "\t    \"name\":\"test2\"\n" +
-                        "\t  }\n" +
-                        "\t],\n" +
-                        "\t\"staff\": []\n" +
-                        "}")
+                .header("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aW5nIiwiZXhwIjoxNTk1MTc0NDc3fQ.kGTpepMi6CktXHw10hV8p_RbPlTcrmk3IZ_RHV12cOVyT5qVIQe9DhUoalBrtZWH7iDoofJY4IwrXblLkEh7AA")
+                .body(objectMapper.writeValueAsString(department))
                 .when()
-                .post("http://localhost:8080/facility/api/department")
+                .post("http://localhost:8080/facility/api/departments")
                 .then()
                 .assertThat()
                 .statusCode(200);
