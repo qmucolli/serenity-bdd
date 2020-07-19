@@ -2,7 +2,7 @@ package dto;
 
 public enum SpecialisationType {
 
-    INFECTED ("infected");
+    CARDIO ("cardio");
 
     String lowerCased;
 

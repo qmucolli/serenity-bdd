@@ -1,10 +1,8 @@
 package definitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import net.thucydides.core.annotations.Steps;
-import org.springframework.beans.factory.annotation.Autowired;
 import steps.DepartmentApiSteps;
 
 public class DepartmentStepDefinitions {
@@ -19,7 +17,5 @@ public class DepartmentStepDefinitions {
 
     @Then("^\"([^\"]*)\" Department should be created$")
     public void departmentShouldBeCreated(String specialisation) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
     }
 }
